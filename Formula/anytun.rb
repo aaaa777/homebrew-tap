@@ -9,13 +9,14 @@ class Anytun < Formula
     sha256 "3d0754ff16504ca675e6d9e62f70ca001a622f90c3b5b8538b59e6f0598dfa49"
     license "MIT"
        
-    # depends_on "cmake" => :build
+    depends_on "coredns"
+    depends_on "v2ray-core"
   
   def install
     # Remove unrecognized options if they cause configure to fail
     # https://rubydoc.brew.sh/Formula.html#std_configure_args-instance_method
-    system "./configure", "--disable-silent-rules", *std_configure_args
-    # system "cmake", "-S", ".", "-B", "build", *std_cmake_args
+    system 'ls -lha'
+    system 'pwd'
   end
 
   test do
