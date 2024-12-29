@@ -10,7 +10,7 @@ class Anytun < Formula
     license "MIT"
        
     depends_on "coredns"
-    depends_on "v2ray-core"
+    depends_on "v2ray"
   
   def install
     # Remove unrecognized options if they cause configure to fail
