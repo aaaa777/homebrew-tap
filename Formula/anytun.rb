@@ -4,11 +4,11 @@
 class Anytun < Formula
     desc ""
     homepage ""
-    version "0.1.0"
+    version "0.1.2"
     license "MIT"
 
-    url "https://github.com/aaaa777/anytun/releases/download/v0.1.0/brew-tarball.tar.gz"
-    sha256 "2cc4ea3ae07f41d251a3b0358a3ba2b5b4d013695b0a49598e996028da5d9922"
+    url "https://github.com/aaaa777/anytun/releases/download/v0.1.2/brew-tarball.tar.gz"
+    sha256 "0d92f4b1dff3141bba6cc0f3dacb5f6bd693fdfd99b647ecfbd689760e9780e7"
        
     depends_on "coredns"
     depends_on "v2ray"
@@ -19,6 +19,7 @@ class Anytun < Formula
     # https://rubydoc.brew.sh/Formula.html#std_configure_args-instance_method
     
     # make build
+    # system 'make', 'build', "BREW_BUILD=1"
     system 'make', 'build', "CONFIG_DIR=#{etc/"anytun"}", "TEMPLATE_CONFIG_DIR=."
     system 'ls -lha'
     system 'pwd'
@@ -44,7 +45,7 @@ class Anytun < Formula
   service do
     require_root true
     # environment_variables CONFIG_DIR: etc/"anytun"
-    run [bin/"anytund"]
+    run [bin/"anytund", "serve"]
   end
 
   test do
