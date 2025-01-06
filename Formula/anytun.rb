@@ -4,11 +4,11 @@
 class Anytun < Formula
     desc ""
     homepage ""
-    version "0.0.5"
+    version "0.1.0"
     license "MIT"
 
-    url "https://github.com/aaaa777/anytun/releases/download/v0.0.18/brew-tarball.tar.gz"
-    sha256 "b98fc0da288f0a8fdb9a6c16957cdacb6d54f9cdd025cd5557bb8a5862171ff4"
+    url "https://github.com/aaaa777/anytun/releases/download/v0.1.0/brew-tarball.tar.gz"
+    sha256 "2cc4ea3ae07f41d251a3b0358a3ba2b5b4d013695b0a49598e996028da5d9922"
        
     depends_on "coredns"
     depends_on "v2ray"
