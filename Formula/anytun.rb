@@ -4,11 +4,11 @@
 class Anytun < Formula
     desc ""
     homepage ""
-    version "0.1.2"
+    version "0.1.3"
     license "MIT"
 
-    url "https://github.com/aaaa777/anytun/releases/download/v0.1.2/brew-tarball.tar.gz"
-    sha256 "0d92f4b1dff3141bba6cc0f3dacb5f6bd693fdfd99b647ecfbd689760e9780e7"
+    url "https://github.com/aaaa777/anytun/releases/download/v0.1.3/brew-tarball.tar.gz"
+    sha256 "de2cbb7eb4ec11401ad33057813826fe88e64a6a587d43e14abbc6ffe5d39818"
        
     depends_on "coredns"
     depends_on "v2ray"
@@ -21,8 +21,8 @@ class Anytun < Formula
     # make build
     # system 'make', 'build', "BREW_BUILD=1"
     system 'make', 'build', "CONFIG_DIR=#{etc/"anytun"}", "TEMPLATE_CONFIG_DIR=."
-    system 'ls -lha'
-    system 'pwd'
+    # system 'ls -lha'
+    # system 'pwd'
     
     # resource("anytun").stage do
     [
